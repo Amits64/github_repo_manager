@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repo Manager</title>
+    <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="/" class="logo">GitHub Repo Manager</a>
+                <ul class="nav-links">
+                    <li><a href="#create-repo">Create Repository</a></li>
+                    <li><a href="#existing-repos">Existing Repositories</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="create-repo">
+            <div class="container">
+                <h1>Create a New Repository</h1>
+                <form id="create-repo-form" class="form">
+                    <label for="name">Repository Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter repository name" required>
+                    <label for="description">Description:</label>
+                    <input type="text" id="description" name="description" placeholder="Enter description" required>
+                    <button type="submit" class="btn btn-primary">Create Repository</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="existing-repos">
+            <div class="container">
+                <h1>Existing Repositories</h1>
+                <ul id="repo-list" class="repo-list">
+                    <!-- List of repositories will be displayed here -->
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 GitHub Repo Manager. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://twitter.com/github_repo_manager" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/company/github_repo_manager" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to external JS for functionality -->
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+
+</html>

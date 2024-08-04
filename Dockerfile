@@ -1,21 +1,17 @@
-# Use a lightweight Python image
+# Use an official Python runtime as a parent image
 FROM python:3.9-slim
 
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file into the container at /app
-COPY requirements.txt .
+# Copy the current directory contents into the container at /app
+COPY . /app
 
 # Install any needed packages specified in requirements.txt
-RUN pip install requests 
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the application code into the container
-COPY . .
+# Make port 5000 available to the world outside this container
+EXPOSE 5000
 
-# Set environment variables (if needed)
-ENV PYTHONPATH=/app
-
-# Run the application
-CMD ["python3", "github_repo_manager/main.py"]
-
+# Run app.py when the container launches
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5000", "backend.app:app"]
