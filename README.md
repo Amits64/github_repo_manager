@@ -19,6 +19,7 @@
 
 - **Python 3.9+**: Ensure you have Python 3.9 or later installed.
 - **GitHub Account**: You need a GitHub account with a Personal Access Token (PAT) for authentication.
+- **Docker**: Optional, for running the application in a Docker container.
 
 ### Installation
 
@@ -50,7 +51,9 @@
    GITHUB_TOKEN=your_personal_access_token
    ```
 
-### Usage
+### Running the Application
+
+#### Running with Python
 
 1. **Create a New Repository**:
 
@@ -69,6 +72,24 @@
    for repo in repos:
        print(repo['name'])
    ```
+
+#### Running with Docker
+
+1. **Build the Docker Image**:
+
+   ```bash
+   docker build -t github_repo_manager .
+   ```
+
+2. **Run the Docker Container**:
+
+   ```bash
+   docker run -it --rm \
+     -e GITHUB_TOKEN=your_personal_access_token \
+     github_repo_manager
+   ```
+
+   Replace `your_personal_access_token` with your actual GitHub PAT. The `-it` flag runs the container in interactive mode, and `--rm` ensures the container is removed after it exits.
 
 ### Running Tests
 
@@ -102,19 +123,12 @@ For questions or support, please contact [Your Name](mailto:your-email@example.c
 ---
 
 **GitHub Repo Manager** is developed and maintained by [Your Name](https://github.com/YourUsername).
-
 ```
 
-### Explanation of Sections:
+### Additional Notes:
 
-- **Overview**: Brief description of the project's purpose and features.
-- **Features**: Highlights key functionalities.
-- **Getting Started**: Instructions to set up and run the project, including prerequisites and installation steps.
-- **Usage**: Examples of how to use the project's main features.
-- **Running Tests**: Instructions to verify the project's functionality.
-- **Contributing**: Guidelines for contributing to the project.
-- **License**: Licensing information.
-- **Contact**: How to get in touch with the project maintainer.
-- **Note**: Placeholders for customization.
+- **Docker Build and Run Instructions**: These instructions are included for those who prefer using Docker to run the application. Make sure your `Dockerfile` is correctly set up to copy the required files and set up the environment.
 
-Feel free to customize the file based on the specifics of your project and any additional details you may want to include.
+- **Environment Variables in Docker**: Using the `-e` flag to pass the GitHub PAT as an environment variable ensures that sensitive information is not hardcoded into the Docker image.
+
+Feel free to adjust the file based on any additional details or specific instructions relevant to your project.
