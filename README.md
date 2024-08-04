@@ -114,7 +114,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ### Contact
 
-For questions or support, please contact [Your Name](mailto:your-email@example.com).
+For questions or support, please contact [Amit Singh](mailto:chauhanamit090@hotmail.com).
 
 ---
 
@@ -122,7 +122,7 @@ For questions or support, please contact [Your Name](mailto:your-email@example.c
 
 ---
 
-**GitHub Repo Manager** is developed and maintained by [Your Name](https://github.com/YourUsername).
+**GitHub Repo Manager** is developed and maintained by [Amits64](https://github.com/Amits64).
 ```
 
 ### Additional Notes:
