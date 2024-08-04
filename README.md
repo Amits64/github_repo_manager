@@ -120,10 +120,9 @@ For questions or support, please contact [Amit Singh](mailto:chauhanamit090@hotm
 
 **Note:** Replace placeholder text (like `your_personal_access_token`, `YourUsername`, etc.) with your actual information.
 
----
 
 **GitHub Repo Manager** is developed and maintained by [Amits64](https://github.com/Amits64).
-```
+
 
 ### Additional Notes:
 
